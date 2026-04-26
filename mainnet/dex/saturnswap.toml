@@ -1,0 +1,15 @@
+[component]
+name = "dex.saturnswap"
+description = "SaturnSwap DEX"
+category = "dex"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1zyd0sj57d9lpu7cy9g9qdurpazqc9l4eaxk6j59nd2gkh4275jq4yvpskgayj55xegdp30g5rfynax66r8vgn9fldndsqzf5tn",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["swap"]

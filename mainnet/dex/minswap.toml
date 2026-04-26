@@ -1,0 +1,20 @@
+[component]
+name = "dex.minswap"
+description = "Minswap V2 DEX — batcher, pool, and order contracts"
+category = "dex"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1w8p79rpkcdz8x9d6tft0x0dx5mwuzac2sa4gm8cvkw5hcnqst2ctf",
+]
+address_prefixes = [
+    "addr1z84q0denmyep98ph3tmzwsmw0j7zau9ljmsqx6a4rvaau6",
+    "addr1z8snz7c4974vzdpxu65ruphl3zjdvtxw8strf2c2tmqnxz",
+    "addr1zxn9efv2f6w82hagxqtn62ju4m293tqvw0uhmdl64ch8uw",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["swap", "liquidity_add", "liquidity_remove"]

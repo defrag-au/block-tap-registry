@@ -1,0 +1,11 @@
+# Track all mints of a specific policy.
+# Simple structural match — no qualify phase needed.
+
+[[routes]]
+name = "my-mints"
+match = [
+    { type = "mint_policy", policy_id = "YOUR_POLICY_ID_HERE" },
+    { type = "has_mint" },
+]
+destination = { type = "webhook", url = "https://your-app.dev/mints" }
+include_cbor = false

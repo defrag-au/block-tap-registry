@@ -1,0 +1,15 @@
+[component]
+name = "marketplace.jpgstore-v2"
+description = "JPG.store V2 marketplace contract"
+category = "marketplace"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1x8rjw3pawl0kelu4mj3c8x20fsczf5pl744s9mxz9v8n7efvjel5h55fgjcxgchp830r7h2l5msrlpt8262r3nvr8ekstg4qrx",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["sale", "listing", "unlisting"]

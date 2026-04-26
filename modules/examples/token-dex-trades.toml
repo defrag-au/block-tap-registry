@@ -1,0 +1,16 @@
+# Track DEX trades involving a specific token.
+# Replace the policy_id with your token's policy.
+# The qualify phase fetches resolved inputs from Maestro to catch
+# both buys (token in outputs) and sells (token in inputs).
+
+[[routes]]
+name = "my-token-trades"
+match = [
+    { type = "address_group", group = "dex" },
+    { type = "has_redeemers" },
+]
+qualify = [
+    { type = "involves_policy", policy_id = "YOUR_POLICY_ID_HERE" },
+]
+destination = { type = "webhook", url = "https://your-app.dev/trades" }
+include_cbor = false

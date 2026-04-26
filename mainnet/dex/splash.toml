@@ -1,0 +1,18 @@
+[component]
+name = "dex.splash"
+description = "Splash DEX pool contracts — per-pool staking credentials"
+category = "dex"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1x89ksjnfu7ys02tedvslc9g2wk90tu5qte0dt4dge60hdudj764lvrxdayh2ux30fl0ktuh27csgmpevdu89jlxppvrsg0g63z",
+]
+address_prefixes = [
+    "addr1z9ryamhgnuz6lau86sqytte2gz5rlktv2yce05e0h3207q",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["swap", "liquidity_add", "liquidity_remove"]

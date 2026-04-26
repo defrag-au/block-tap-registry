@@ -1,0 +1,15 @@
+[component]
+name = "staking.the-vault"
+description = "The Vault staking contract (CNFT Tools)"
+category = "staking"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1z98ps3vxeewk94rwp5dtxvzlr4aczync78p8am9l9w4vcn04fr9rh39dpgmzl234njvxfpnah654jxuwzlgnqejnnkwq2zuf48",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["stake", "unstake"]

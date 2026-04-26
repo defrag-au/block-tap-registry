@@ -1,0 +1,15 @@
+# Track marketplace sales for a specific NFT policy.
+# Matches all known marketplaces, qualifies to sales only.
+
+[[routes]]
+name = "my-nft-sales"
+match = [
+    { type = "address_group", group = "marketplace" },
+    { type = "has_redeemers" },
+]
+qualify = [
+    { type = "involves_policy", policy_id = "YOUR_POLICY_ID_HERE" },
+    { type = "tx_type", types = ["sale"] },
+]
+destination = { type = "webhook", url = "https://your-app.dev/sales" }
+include_cbor = false

@@ -1,0 +1,15 @@
+[component]
+name = "marketplace.jpgstore-v4"
+description = "JPG.store V4 marketplace contract — simplified design with asset ID + seller credentials"
+category = "marketplace"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1w999n67e47he8y0v36hjtzluargwu25zw94f6lqnm82aqqsg4xkcp",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["sale", "listing", "unlisting", "offer"]

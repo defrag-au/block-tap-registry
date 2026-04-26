@@ -1,0 +1,16 @@
+[component]
+name = "marketplace.jpgstore-v1"
+description = "JPG.store V1 marketplace contracts"
+category = "marketplace"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1xxgx3far7qygq0k6epa0zcvcvrevmn0ypsnfsue94nsn3tfvjel5h55fgjcxgchp830r7h2l5msrlpt8262r3nvr8eks2utwdd",
+    "addr1zxgx3far7qygq0k6epa0zcvcvrevmn0ypsnfsue94nsn3tvpw288a4x0xf8pxgcntelxmyclq83s0ykeehchz2wtspks905plm",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["sale", "offer"]
