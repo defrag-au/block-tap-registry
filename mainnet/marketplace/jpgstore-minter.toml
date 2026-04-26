@@ -1,0 +1,16 @@
+[component]
+name = "marketplace.jpgstore-minter"
+description = "JPG.store minting contract"
+category = "marketplace"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1xx2l3rxnj5cuvj58fxnztewnlxneejzayqqakg7c2xkkt0gejuwlk348lfs3mh65tm5ym27hg9z5cjphv6w7sv3dwxqsk9as6l",
+]
+has_redeemers = true
+has_mint = true
+
+[component.qualify]
+resolve_inputs = false
+detectable_types = ["mint"]

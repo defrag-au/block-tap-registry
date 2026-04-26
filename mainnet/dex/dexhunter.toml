@@ -1,0 +1,15 @@
+[component]
+name = "dex.dexhunter"
+description = "DexHunter aggregator contract"
+category = "dex"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1xxg94wrfjcdsjncmsxtj0r87zk69e0jfl28n934sznu95tdj764lvrxdayh2ux30fl0ktuh27csgmpevdu89jlxppvrs2993lw",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["swap"]

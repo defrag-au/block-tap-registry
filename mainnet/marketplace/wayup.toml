@@ -1,0 +1,19 @@
+[component]
+name = "marketplace.wayup"
+description = "Wayup marketplace contracts — uses per-seller staking credentials"
+category = "marketplace"
+network = "mainnet"
+
+[component.match]
+addresses = [
+    "addr1zxnk7racqx3f7kg7npc4weggmpdskheu8pm57egr9av0mtvasazx8r5xwqtnfjsfrnat3h6yrycd2hfm9qpg7d0hf50s7x4y79",
+    "addr1v87m5srrtx52s8jdragjl8wle0eq57dzv2n62nxh3nx65dq0edwwu",
+]
+address_prefixes = [
+    "addr1zxnk7racqx3f7kg7npc4weggmpdskheu8pm57egr9av0mt",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["sale", "listing", "unlisting"]

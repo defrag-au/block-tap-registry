@@ -1,0 +1,15 @@
+[component]
+name = "defi.crowdlock"
+description = "CrowdLock vesting contract — per-user staking credentials"
+category = "defi"
+network = "mainnet"
+
+[component.match]
+address_prefixes = [
+    "addr1zyupekdkyr8f6lrnm4zulcs8juwv080hjfgsqvgkp98kkd",
+]
+has_redeemers = true
+
+[component.qualify]
+resolve_inputs = true
+detectable_types = ["lock", "unlock"]

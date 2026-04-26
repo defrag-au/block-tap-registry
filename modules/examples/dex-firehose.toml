@@ -1,0 +1,11 @@
+# All DEX activity — swaps, liquidity adds/removes across all known DEXes.
+# Uses address_group for runtime resolution from the registry.
+
+[[routes]]
+name = "dex-all"
+match = [
+    { type = "address_group", group = "dex" },
+    { type = "has_redeemers" },
+]
+destination = { type = "log" }
+include_cbor = false
