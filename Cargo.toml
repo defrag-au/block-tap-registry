@@ -1,0 +1,25 @@
+[workspace]
+members = [
+    "crates/registry-types",
+    "crates/registry-resolver",
+    "crates/registry-validator",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+license = "Apache-2.0"
+repository = "https://github.com/defrag-au/block-tap-registry"
+
+[workspace.dependencies]
+registry-types = { path = "crates/registry-types" }
+registry-resolver = { path = "crates/registry-resolver" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+thiserror = "2"
+tracing = "0.1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+anyhow = "1"

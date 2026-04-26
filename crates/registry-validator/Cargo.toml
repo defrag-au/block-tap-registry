@@ -1,0 +1,12 @@
+[package]
+name = "registry-validator"
+description = "CI validator for block-tap registry component files"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+registry-types = { workspace = true }
+registry-resolver = { workspace = true }
+anyhow = { workspace = true }
